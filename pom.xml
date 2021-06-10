@@ -18,11 +18,6 @@
 		<spring.boot.version>2.4.4</spring.boot.version>
 	</properties>
 
-	<scm>
-		<url>http://svn.navboy.com/omnigis/honinyun/weforward/trunk/spring-boot-starter-weforward/</url>
-		<tag>http://svn.navboy.com/omnigis/honinyun/weforward/tags/spring-boot-starter-weforward/</tag>
-	</scm>
-	
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
