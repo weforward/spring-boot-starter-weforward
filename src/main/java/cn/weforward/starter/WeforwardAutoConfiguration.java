@@ -30,6 +30,8 @@ public class WeforwardAutoConfiguration {
 	private int m_Threads;
 	@Value(value = "${weforward.serverid:x00ff}")
 	private String m_Serverid;
+	@Value(value = "${weforward.gatewayUrl:}")
+	private String m_GatewayUrl;
 	@Value(value = "${weforward.apiUrl:}")
 	private String m_ApiUrl;
 	@Value(value = "${weforward.service.accessId:}")
@@ -61,7 +63,6 @@ public class WeforwardAutoConfiguration {
 	WeforwardService weforwardService() throws Exception {
 		WeforwardService service = new WeforwardService(m_Name, m_Host, m_Port, m_Path, m_Threads);
 		service.setNo(m_Serverid);
-		service.setGatewayUrl(m_ApiUrl);
 		service.setAccessId(m_ServiceAccessId);
 		service.setAccessKey(m_ServiceAccessKey);
 		service.setMeterRegistryUrl(m_MeterUrl);
@@ -84,6 +85,11 @@ public class WeforwardAutoConfiguration {
 		if (m_MaxHttpSize > 0) {
 			service.setMaxHttpSize(m_MaxHttpSize);
 		}
+		String url = m_GatewayUrl;
+		if (StringUtil.isEmpty(url)) {
+			url = m_ApiUrl;
+		}
+		service.setGatewayUrl(m_GatewayUrl);
 		return service;
 	}
 
