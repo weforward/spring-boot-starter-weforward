@@ -57,7 +57,7 @@ public class WeforwardAutoConfiguration {
 	@Value(value = "${weforward.maxHttpSize:0}")
 	protected int m_MaxHttpSize;
 
-	@Bean
+	@Bean(destroyMethod = "destroy")
 	WeforwardService weforwardService() throws Exception {
 		WeforwardService service = new WeforwardService(m_Name, m_Host, m_Port, m_Path, m_Threads);
 		service.setNo(m_Serverid);
