@@ -27,8 +27,8 @@
 	</licenses>
 
 	<scm>
-		<url>https://github.com/weforward/spring-boot-starter-weforward.git</url>
-		<tag>https://github.com/weforward/spring-boot-starter-weforward.git</tag>
+		<url>https://github.com/weforward/weforward-spring-boot-starter.git</url>
+		<tag>https://github.com/weforward/weforward-spring-boot-starter.git</tag>
 	</scm>
 
 	<properties>
