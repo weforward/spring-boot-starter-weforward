@@ -18,24 +18,34 @@ import cn.weforward.protocol.client.proxy.ServiceInvokerProxyFactory;
 @ConditionalOnClass(value = WeforwardService.class)
 @Configuration
 public class WeforwardAutoConfiguration {
+	/** 服务名 */
 	@Value(value = "${weforward.name:my_weforward}")
 	private String m_Name;
+	/** 服务主机 */
 	@Value(value = "${weforward.host:*}")
 	private String m_Host = "*";
+	/** 服务路径 */
 	@Value(value = "${weforward.path:}")
 	private String m_Path;
+	/** 服务端口 */
 	@Value(value = "${weforward.port:15000}")
 	private int m_Port;
+	/** 服务线程数 */
 	@Value(value = "${weforward.threads:50}")
 	private int m_Threads;
+	/** 服务id */
 	@Value(value = "${weforward.serverid:x00ff}")
 	private String m_Serverid;
+	/** 服务网关地址 */
 	@Value(value = "${weforward.gatewayUrl:}")
 	private String m_GatewayUrl;
+	/** 调用服务网关地址 */
 	@Value(value = "${weforward.apiUrl:}")
 	private String m_ApiUrl;
+	/** 服务访问凭证id */
 	@Value(value = "${weforward.service.accessId:}")
 	private String m_ServiceAccessId;
+	/** 服务访问凭证key */
 	@Value(value = "${weforward.service.accessKey:}")
 	private String m_ServiceAccessKey;
 	@Value(value = "${weforward.meter.url:}")
