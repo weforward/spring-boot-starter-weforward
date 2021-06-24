@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>cn.weforward</groupId>
-	<artifactId>spring-boot-starter-weforward</artifactId>
-	<version>1.0.1</version>
+	<artifactId>weforward-spring-boot-starter</artifactId>
+	<version>1.0.0</version>
 	<packaging>jar</packaging>
 
-	<name>spring-boot-starter-weforward</name>
+	<name>weforward-spring-boot-starter</name>
 	<url>http://weforward.cn</url>
 	<description>weforward module</description>
 
@@ -61,7 +61,7 @@
 		</dependency>
 	</dependencies>
 	<build>
-		<finalName>spring-boot-starter-weforward</finalName>
+		<finalName>weforward-spring-boot-starter</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
