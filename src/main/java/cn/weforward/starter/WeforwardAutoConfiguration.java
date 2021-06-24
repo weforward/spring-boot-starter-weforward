@@ -48,8 +48,10 @@ public class WeforwardAutoConfiguration {
 	/** 服务访问凭证key */
 	@Value(value = "${weforward.service.accessKey:}")
 	private String m_ServiceAccessKey;
+	/** 服务指标收集链接 */
 	@Value(value = "${weforward.meter.url:}")
 	private String m_MeterUrl;
+	/** 服务追踪收集链接 */
 	@Value(value = "${weforward.trace.url:}")
 	private String m_TraceUrl;
 	@Value(value = "${weforward.runningId:}")
